@@ -1,7 +1,7 @@
 CC		:= gcc
 CCFLAGS	:= -O0 -Wall 
 
-OBJS	:= main.o ../common/socket_helper.o ../common/debug.o ../common/def.o
+OBJS	:= main.o ../common/socket_helper.o ../common/debug.o ../common/def.o ../common/string_helper.o
 
 all: ftpc
 

@@ -33,11 +33,20 @@ struct ftp_cmd_str FTP_CMD_STR[FTP_CMD_COUNT] = {
     {"RMD" , RMD },
     {"MKD" , MKD },
     {"PWD" , PWD },
+    {"CWD" , CWD },
+    {"CDUP", CDUP},
     {"LIST", LIST},
     {"NLST", NLST},
     {"SITE", SITE},
     {"STAT", STAT},
     {"HELP", HELP},
-    {"NOOP", NOOP}
+    {"TYPE", TYPE},
+    {"PASV", PASV},
+    {"PORT", PORT},
+    {"SYST", SYST},
+    {"NOOP", NOOP},
+    {"QUIT", QUIT},
+    {"MDTM", MDTM},
+    {"SIZE", SIZE}
 };
 

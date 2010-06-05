@@ -19,9 +19,8 @@
 #ifndef  FTPD_DEBUG_INC
 #define  FTPD_DEBUG_INC
 
-#include	<syslog.h>
-
 void die(char *msg);
+void plog(char* fmt, ...);
 
 #endif   /* ----- #ifndef FTPD_DEBUG_INC  ----- */
 

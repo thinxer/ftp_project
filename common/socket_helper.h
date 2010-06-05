@@ -18,13 +18,21 @@
 
 #ifndef  SOCKET_HELPER_INC
 #define  SOCKET_HELPER_INC
-
+#include	<stdio.h>
 #include	<sys/socket.h>
 #include	<arpa/inet.h>
 #include	<unistd.h>
 
-int create_listen_socket(uint32_t inaddr, uint16_t port, int backlog); /* create a socket, bind and listent to it */
-int create_client_socket(char* server_address, unsigned short port);
+/* create a socket, bind and listen to it */
+int create_listen_socket(unsigned int inaddr, unsigned short port, int backlog); 
+/* create a client socket, connect to the server */
+int create_client_socket(unsigned int server_address, unsigned short port);
+int create_client_socket_char(char* server_address, unsigned short port);
 int close_socket(int* sock);
 
+int send_msg(int sock, const char* fmt, ...);
+int send_file(int sock, FILE* file);
+int send_local_file(int sock, char* file, unsigned int rest);
+int receive_file(int sock, FILE* file);
+int receive_local_file(int sock, char* path, unsigned int rest);
 #endif   /* ----- #ifndef SOCKET_HELPER_INC  ----- */
